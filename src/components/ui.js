@@ -129,7 +129,7 @@ export function SuperHeading({ ...props }) {
 }
 
 export function Heading({ ...props }) {
-  return <Text as="h2" variant="heading" {...props} />
+  return <Text as="h3" variant="heading" {...props} />
 }
 
 export function Subhead({ ...props }) {

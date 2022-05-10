@@ -28,8 +28,8 @@ export default function StatList(props) {
   return (
     <Container width="fullbleed">
       <Section padding={5} radius="large" background="primary">
-        <Flex responsive variant="end">
-          <Box width="half">
+        <Flex responsive  >
+          <Box width="half" >
             {props.icon && (
               <Icon alt={props.icon.alt} image={props.icon.gatsbyImageData} />
             )}
@@ -49,7 +49,7 @@ export default function StatList(props) {
           </Box>
           <Box width="half">
             {props.image && (
-              <Nudge right={5} bottom={5}>
+              <Nudge  >
                 <GatsbyImage
                   alt={props.image.alt}
                   image={getImage(props.image.gatsbyImageData)}
