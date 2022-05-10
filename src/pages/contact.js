@@ -75,7 +75,17 @@ export default function ContactPage(props){
                         />
                     </Box>
                     <Box width="half">
-                        <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                        <form name="contact"
+                                method="post"
+                                action="/thanks/"
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field">
+                                    <input type="hidden" name="form-name" value="contact" />
+                                    <div hidden>
+                                <label>
+                                    Don’t fill this out: <input name="bot-field" />
+                                </label>
+                                </div>
                             <div style={{display:"flex"}}>
                                 <Base className="input-area" style={{ padding:".5rem", flex:"1"}}>
                                     <h5 style={{margin:"0 0 5px 0"}}>First Name</h5>
@@ -99,7 +109,7 @@ export default function ContactPage(props){
                                 <TeaxtArea name="description" req value={formState.description} onChange={(e) => setFormState({...formState, [e.target.name]:e.target.value})}/>
                             </Base>
                             <Base style={{padding:".5rem"}}>
-                                <button style={{padding:"1rem 2rem", background:"#004445", color:"white",fontSize:"15px", fontWeight:"bolder", cursor:"pointer", border:"none", borderRadius:"10px"}} onClick={handleSubmit} type="submit" >Send</button>
+                                <button style={{padding:"1rem 2rem", background:"#004445", color:"white",fontSize:"15px", fontWeight:"bolder", cursor:"pointer", border:"none", borderRadius:"10px"}} type="submit" >Send</button>
                             </Base>  
                         </form>
                         {isSubmitted && <Base  style={{background:"green", padding:"1rem", color:"white", borderRadius:"10px", marginTop:"1rem"}}>
