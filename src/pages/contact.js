@@ -2,10 +2,9 @@ import * as React from "react"
 
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Container, Section, Button, Box,Text, Flex, Base, Heading} from "../components/ui"
+import { Container, Section, Box,Text, Flex, Base, Heading} from "../components/ui"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { backgrounds } from "../components/ui.css"
 
 const TeaxtArea = styled.textarea`
 width: 100%;
@@ -100,7 +99,7 @@ export default function ContactPage(props){
                                 <TeaxtArea name="description" req value={formState.description} onChange={(e) => setFormState({...formState, [e.target.name]:e.target.value})}/>
                             </Base>
                             <Base style={{padding:".5rem"}}>
-                                <Button onClick={handleSubmit}>Send</Button>
+                                <button style={{padding:"1rem 2rem", background:"#004445", color:"white",fontSize:"15px", fontWeight:"bolder", cursor:"pointer", border:"none", borderRadius:"10px"}} onClick={handleSubmit} type="submit" >Send</button>
                             </Base>  
                         </form>
                         {isSubmitted && <Base  style={{background:"green", padding:"1rem", color:"white", borderRadius:"10px", marginTop:"1rem"}}>
