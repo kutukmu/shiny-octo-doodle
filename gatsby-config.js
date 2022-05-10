@@ -6,10 +6,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
-    title: "Gatsby Contentful Homepage Starter",
-    author: `Gatsby`,
-    description: "A Gatsby Starter for building homepages with Contentful",
+    siteUrl: "https://galatawebdesign.com",
+    title: "Galata Web Design Chicago",
+    author: `Galata Web Design`,
+    description: "Fast and high quality web design service . Seo optimization to get a lot of traffic to your website. We provide professional web design solutions to solve your problems. Trustable and pixel perfect web design service is here in Chicago. ",
   },
   plugins: [
     {
@@ -35,7 +35,7 @@ module.exports = {
         // These can be imported once ESM support lands
         background_color: "#f9efe7",
         theme_color: "#f9efe7",
-        icon: "src/favicon.png",
+        icon: "src/Gl-logos.jpeg",
       },
     },
   ],
