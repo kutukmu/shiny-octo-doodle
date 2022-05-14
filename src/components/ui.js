@@ -136,6 +136,10 @@ export function Subhead({ ...props }) {
   return <Text as="h3" variant="subhead" {...props} />
 }
 
+export function ProjectHead({ ...props }){
+  return <Text as="h3" variant="subhead" style={{fontSize:"30px", fontWeight:"400"}} {...props}/>
+}
+
 export function Kicker({ ...props }) {
   return <Text variant="kicker" {...props} />
 }

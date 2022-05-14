@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container, Box, FlexList, Subhead, Button, Section} from "../components/ui"
+import { Container,Heading,ProjectHead, Box, FlexList, Subhead, Button, Section} from "../components/ui"
 
 export default function ProjectPage (props){
     const data = props.data.allContentfulProject.edges
@@ -10,14 +10,17 @@ export default function ProjectPage (props){
     return(
         <Layout title="Projects">
           <Section >
-          <Container style={{marginTop:"2rem"}}>
-          <FlexList gutter={3} variant="start" responsive wrap>
+          <Container>
+          <Box>
+                      <Heading style={{color:"#004445"}} center>Choose from Our Catalog</Heading>
+           </Box>
+          <FlexList style={{marginTop:"50px"}} gutter={3} variant="start" responsive wrap>
             {data.map((item) =>{
                 const {node} = item
                 return  <Box key={node.contentful_id} as="li" width="third"  padding={4} paddingY={3}>
-                    <Subhead center>
+                    <ProjectHead  center >
             {node.title}
-            </Subhead>
+            </ProjectHead>
                     <GatsbyImage
                         alt={node.featuredImage.alt}
                         image={getImage(node.featuredImage.gatsbyImageData)}
